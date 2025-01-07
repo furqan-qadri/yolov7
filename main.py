@@ -23,7 +23,7 @@ def detect_webcam(weights='yolov7.pt', conf_thres=0.25, iou_thres=0.45):
     class_names = model.module.names if hasattr(model, 'module') else model.names
 
     # Open the webcam (device index 0)
-    # cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(0)
     if not cap.isOpened():
         print("Unable to open webcam.")
         return
